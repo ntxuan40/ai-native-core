@@ -1,53 +1,30 @@
 ---
+name: AI-Native Feature Request
+about: Standard template enforcing UI/Data/API split and AI constraints
+title: '[FEAT]: '
+labels: 'enhancement, pending-dor'
+---
 
-name: Feature Request
-about: Propose a new feature or architectural enhancement
-title: "[FEATURE] "
-labels: "enhancement"
-assignees: ""
--------------
+### 1. Business Intent & Scope
+- **Problem Statement:**
+- **In Scope:**
+- **Out of Scope (Non-Goals):**
 
-### 1. Problem Statement & User Value
+### 2. Architectural Decomposition
+- **UI Layer:** (Screens, input fields, validation rules, error states)
+- **Data Layer:** (Entities, schema changes, constraints, PII classification)
+- **API Layer:** (REST endpoints, HTTP verbs, payload specs, status codes, authz)
 
-Describe the user need or problem this feature solves.
+### 3. AI Copilot Execution Constraints
+- **Target Tech Stack:** Python 3.11 / FastAPI / Pydantic v2 / PostgreSQL
+- **Allowed Directory Scope:** `src/modules/work_orders/`, `tests/unit/`
+- **Dependency Guardrail:** Do NOT introduce external third-party dependencies without architectural review.
 
-### 2. Scope & Technical Requirements
+### 4. Acceptance Criteria (Gherkin-lite)
+- [ ] **Given** an authenticated user, **When** submitting valid WO payload, **Then** return HTTP 201 Created.
+- [ ] **Given** invalid PII inputs, **When** submitting, **Then** return HTTP 422 with field-level validation errors.
 
-#### UI Layer
-
-* Screens:
-* Input fields:
-* Validation:
-* Error states:
-
-#### Data Layer
-
-* Entities:
-* Database tables:
-* Constraints:
-* PII classification:
-
-#### API Layer
-
-* Endpoint:
-* HTTP method:
-* Request:
-* Response:
-* Authentication / Authorization:
-
-### 3. Non-Goals
-
-Specify what is explicitly out of scope for this task.
-
-### 4. Acceptance Criteria
-
-* [ ] Given X, when Y, then Z.
-* [ ] Unit test coverage meets project requirements.
-
-### 5. Definition of Ready
-
-* [ ] UI/Data/API split is defined.
-* [ ] Non-goals are defined.
-* [ ] Security considerations are identified.
-* [ ] Testable acceptance criteria are provided.
-* [ ] Target files or directories are identified.
+### 5. Definition of Ready (DoR) Checklist
+- [ ] UI/Data/API split strictly defined.
+- [ ] Non-goals explicitly declared.
+- [ ] PII & Security classification stated.
