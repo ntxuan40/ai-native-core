@@ -1,5 +1,5 @@
 ## 1. Traceability
-- **Issue Linked:** Closes #WO-201
+- **Issue Linked:** Closes #2
 - **Spec Path:** `docs/work-order-decomposition.md`
 
 ## 2. AI Usage Disclosure & Provenance
