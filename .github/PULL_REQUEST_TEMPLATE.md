@@ -1,54 +1,26 @@
 ## 1. Specification Link
-
-Closes #<Issue_Number>
-
-Spec Document:
+Closes #<Issue_Number> | Spec Document: [link to doc/spec]
 
 ## 2. Summary of Changes
-
-*
-*
-*
+- Implemented feature X using framework Y.
+- Refactored component Z.
 
 ## 3. Test Plan & Proof
-
-* [ ] Unit tests added or updated.
-* [ ] All tests pass locally.
-* [ ] Integration tests verified where applicable.
-
-### Test Output
-
+- [ ] Unit tests added and passing locally.
+- [ ] Integration test log attached below:
 ```text
 [Paste test output here]
 ```
 
 ## 4. AI Usage Disclosure
-
-* [ ] No AI used.
-* [ ] AI-Assisted: GitHub Copilot was used.
-* [ ] AI-generated logic was reviewed by a human developer.
-* [ ] AI-generated code was tested and verified.
-
-### AI Usage Details
-
-Describe how AI was used:
+- [ ] **No AI used**
+- [ ] **AI-Assisted:** GitHub Copilot used for boilerplate, unit tests, or function autocomplete.
+- [ ] **Human Verification:** All AI-generated logic has been read, verified, and tested line-by-line.
 
 ## 5. Security Checklist
+- [ ] No hardcoded secrets, API keys, or credentials.
+- [ ] Input validation applied to all public endpoints.
 
-* [ ] No hardcoded secrets.
-* [ ] No API keys or credentials committed.
-* [ ] Input validation applied where required.
-* [ ] Authorization checks verified where applicable.
-* [ ] No sensitive customer data included.
-
-## 6. Documentation
-
-* [ ] README updated if required.
-* [ ] `/docs` updated if required.
-
-## 7. Pre-Merge Checklist
-
-* [ ] Branch is up to date.
-* [ ] CI checks pass.
-* [ ] Code review completed.
-* [ ] No unintended files are included.
+## 6. Pre-Merge Checklist
+- [ ] Branch is up to date with `develop`/`main`.
+- [ ] Documentation updated (`README.md` or `/docs`).
