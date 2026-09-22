@@ -99,3 +99,23 @@ Developers remain responsible for:
 * Running tests
 * Checking security implications
 * Approving the final change
+
+##
+
+### Copilot Code Generation Scorecard
+
+| No. | Evaluation Criteria | Source Rules File | Status | Notes / Evidence |
+| :--- | :--- | :--- | :---: | :--- |
+| 1 | Uses Java 17+ and Spring Boot 3.3+ syntax | coding-rules.md | **Pass** | Uses jakarta.validation package standard for Spring Boot 3+. |
+| 2 | Follows Naming Conventions (PascalCase for classes, camelCase for methods/variables) | coding-rules.md | **Pass** | Evaluated names like ScratchHandler and createWorkOrder strictly follow the rule. |
+| 3 | Avoids generic Exception or RuntimeException | coding-rules.md | **Pass** | Relies properly on Spring's built-in validation framework handling rather than raw catches. |
+| 4 | Uses SLF4J logger with correct instantiation and logs no PII | coding-rules.md | **Pass** | Standard logger setup. Log message is generic: "Creating a new work order". |
+| 5 | Implements Constructor Injection (No field @Autowired) | coding-rules.md | **Pass** | Declared private final WorkOrderService and injected via the constructor. |
+| 6 | Scope management: No variables declared inside loops | coding-rules.md | **Pass** | No performance overhead; controller layer stays flat without local loop scopes. |
+| 7 | Uses plural nouns for REST resources (/api/workorders) | api-rules.md | **Pass** | Correctly maps the endpoint to @RequestMapping("/api/workorders"). |
+| 8 | Strict schema conformance: No invented JSON fields | api-rules.md | **Pass** | WorkOrderRequest body contains only requested title and description fields. |
+| 9 | Request validation with @Valid and specific constraints | api-rules.md | **Pass** | Endpoint has @Valid annotation; fields use @NotBlank with messages. |
+| 10 | Enforcement of Role-Based Access Control (RBAC) | security-rules.md | **Pass** | Secured using @PreAuthorize("hasRole('ROLE_TECHNICIAN')") constraint. |
+
+**Final Evaluation:** **10/10 Criteria Passed.** The generated code perfectly conforms to the established ruleset context.
+
