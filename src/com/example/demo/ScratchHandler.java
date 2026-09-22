@@ -30,6 +30,16 @@ public class ScratchHandler {
 		this.workOrderService = workOrderService;
 	}
 
+    // ĐOẠN CODE LỖI ĐỂ REVIEW:
+    @PostMapping("/create")
+    public ResponseEntity create(@RequestBody Map<String, String> payload) {
+        System.out.println("User password was: " + payload.get("password")); // Lộ PII
+        String sql = "INSERT INTO work_orders (eq_code, desc) VALUES ('" + payload.get("code") + "', '" + payload.get("desc") + "')"; // SQL Injection
+        jdbcTemplate.execute(sql);
+        return ResponseEntity.ok("Done");
+    }
+
+
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@PreAuthorize("hasRole('ROLE_TECHNICIAN')")
 	public ResponseEntity<WorkOrderResponse> createWorkOrder(
