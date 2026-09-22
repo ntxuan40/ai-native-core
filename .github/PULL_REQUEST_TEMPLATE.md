@@ -22,5 +22,5 @@ Closes #<Issue_Number> | Spec Document: [link to doc/spec]
 - [ ] Input validation applied to all public endpoints.
 
 ## 6. Pre-Merge Checklist
-- [ ] Branch is up to date with `develop`/`main`.
+- [ ] Branch is up to date with `develop`/`main`. 
 - [ ] Documentation updated (`README.md` or `/docs`).
